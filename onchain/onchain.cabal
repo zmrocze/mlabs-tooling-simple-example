@@ -1,5 +1,5 @@
 cabal-version:      3.0
-name:               mlabs-plutus-template-onchain
+name:               onchain
 version:            0.0.0.1
 author:             MLabs
 maintainer:         MLabs
@@ -64,7 +64,7 @@ library
   other-modules:
 
   build-depends:
-    , plutus-ledger
+    -- , plutus-ledger
     , plutus-ledger-api
     , plutus-script-utils
     , plutus-tx
@@ -80,7 +80,7 @@ executable exporter
     , base
     , bytestring
     , cardano-api
-    , mlabs-plutus-template-onchain
+    , onchain
     , plutus-ledger
     , plutus-ledger-api
     , plutus-tx
