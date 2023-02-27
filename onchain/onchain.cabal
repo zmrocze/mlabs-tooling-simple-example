@@ -65,11 +65,11 @@ library
 
   build-depends:
     -- , plutus-ledger
-    , plutus-ledger-api
+    , plutus-ledger-api  == 1.0.0.1
     , plutus-script-utils
     , plutus-tx
     , plutus-tx-plugin
-    , plutarch
+    -- , plutarch
 
   hs-source-dirs:  src
 
@@ -82,7 +82,7 @@ executable exporter
     , cardano-api
     , onchain
     , plutus-ledger
-    , plutus-ledger-api
+    , plutus-ledger-api == 1.0.0.1
     , plutus-tx
     , plutus-tx-plugin
     , serialise

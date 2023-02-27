@@ -2148,6 +2148,23 @@
         "type": "indirect"
       }
     },
+    "iohk-monitoring": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1618812822,
+        "narHash": "sha256-v0L0pcyO2rP7/HCoGwFgHEMUOPBGwaRV0r+/JOhtKAk=",
+        "owner": "input-output-hk",
+        "repo": "iohk-monitoring-framework",
+        "rev": "0fbd28820b328085b26baad4483f48b0215ec550",
+        "type": "github"
+      },
+      "original": {
+        "owner": "input-output-hk",
+        "repo": "iohk-monitoring-framework",
+        "rev": "0fbd28820b328085b26baad4483f48b0215ec550",
+        "type": "github"
+      }
+    },
     "iohk-nix": {
       "flake": false,
       "locked": {
@@ -3901,6 +3918,7 @@
     },
     "root": {
       "inputs": {
+        "iohk-monitoring": "iohk-monitoring",
         "plutarch": "plutarch",
         "plutus": "plutus_2",
         "plutus-apps": "plutus-apps",
