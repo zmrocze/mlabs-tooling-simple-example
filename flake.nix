@@ -8,42 +8,35 @@
 
   inputs = {
     tooling.url = "github:mlabs-haskell/mlabs-tooling.nix";
-    # plutus-apps = {
-    #   url = "github:input-output-hk/plutus-apps/v1.1.0";
-    #   flake = false;
-    # };
-    # plutus = {
-    #   url = "github:input-output-hk/plutus/a56c96598b4b25c9e28215214d25189331087244";
-    #   flake = false;
-    # };
-    # iohk-monitoring = {
-    #   url = github:input-output-hk/iohk-monitoring-framework/0fbd28820b328085b26baad4483f48b0215ec550;
-    #   flake = false;
-    # };
-    # plutarch.url = github:Plutonomicon/plutarch-plutus/v1.3.0;
-    quickcheck-contractmodel = {
-      url = github:Quviq/quickcheck-contractmodel/b66e3ff0c6011dcef63f2bcfa6ea8d6ab685230d;
+    plutarch.url = github:Plutonomicon/plutarch-plutus;
+    plutus-apps = {
+      url = "github:input-output-hk/plutus-apps/v1.0.0";
       flake = false;
     };
-            # all inputs below here are for pinning with haskell.nix
-    # cardano-addresses = {
-    #   url =
-    #     "github:input-output-hk/cardano-addresses/5094fb9d304ed69adedc99513634a00cbf850fca";
-    #   flake = false;
-    # };
-    cardano-node = {
-      url =
-        "github:input-output-hk/cardano-node/ebc7be471b30e5931b35f9bbc236d21c375b91bb";
-      flake = false; # we need it to be available in shell
+    cardano-wallet = {
+      url = github:input-output-hk/cardano-wallet/18a931648550246695c790578d4a55ee2f10463e;
+      flake = false;
+      };
+    servant-purescript = {
+      url = github:input-output-hk/servant-purescript/44e7cacf109f84984cd99cd3faf185d161826963;
+      flake = false;
     };
-    # cardano-wallet = {
-    #   url = "github:input-output-hk/cardano-wallet/bbf11d4feefd5b770fb36717ec5c4c5c112aca87";
-    #   flake = false;
-    # };
-    # hw-aeson = {
-    #   url = "github:haskell-works/hw-aeson/ba7c1e41c6e54d6bf9fd1cd013489ac713fc3153";
-    #   flake = false;
-    # };
+    purescript-bridge = {
+      url = github:input-output-hk/purescript-bridge/47a1f11825a0f9445e0f98792f79172efef66c00;
+      flake = false;
+    };
+    quickcheck-dynamic = {
+      url = github:input-output-hk/quickcheck-dynamic/c272906361471d684440f76c297e29ab760f6a1e;
+      flake = false;
+    };
+    cardano-addresses = {
+      url = github:input-output-hk/cardano-addresses/b7273a5d3c21f1a003595ebf1e1f79c28cd72513;
+      flake = false;
+    };
+    cardano-ledger = {
+      url = github:input-output-hk/cardano-ledger/da3e9ae10cf9ef0b805a046c84745f06643583c2;
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, tooling, ... }: tooling.lib.mkFlake { inherit self; }
@@ -52,14 +45,14 @@
         (tooling.lib.mkHaskellFlakeModule1 {
           project.src = ./.;
           project.extraHackage = [
-           # "${inputs.plutus}/plutus-ledger-api"
+          #  "${inputs.plutus}/plutus-ledger-api"
           #  "${inputs.plutus-apps}/plutus-ledger" 
           #  "${inputs.plutus-apps}/plutus-script-utils" 
           #  "${inputs.plutus-apps}/freer-extras"
-          #  "${inputs.plutarch}"
+           "${inputs.plutarch}"
           #  "${inputs.quickcheck-contractmodel}/contractmodel"
           #  "${inputs.iohk-monitoring}/iohk-monitoring"
-           "${inputs.cardano-node}/cardano-api"
+          #  "${inputs.cardano-node}/cardano-api"
           ];
         })
       ];
