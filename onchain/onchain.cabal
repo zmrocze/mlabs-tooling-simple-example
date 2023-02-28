@@ -64,6 +64,7 @@ library
   other-modules:
 
   build-depends:
+    , cardano-api == 1.35.5
     -- , plutus-ledger
     -- , plutus-ledger-api  == 1.0.0.1
     -- , plutus-script-utils
@@ -79,7 +80,7 @@ executable exporter
   build-depends:
     , base
     , bytestring
-    , cardano-api == 1.35.4
+    , cardano-api == 1.35.5
     , onchain
     -- , plutus-ledger
     -- , plutus-ledger-api == 1.0.0.1

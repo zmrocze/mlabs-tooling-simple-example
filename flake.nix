@@ -37,6 +37,10 @@
       url = github:input-output-hk/cardano-ledger/da3e9ae10cf9ef0b805a046c84745f06643583c2;
       flake = false;
     };
+    cardano-node = {
+      url = github:input-output-hk/cardano-node/1.35.5;
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, tooling, ... }: tooling.lib.mkFlake { inherit self; }
@@ -46,11 +50,12 @@
           project.src = ./.;
           project.compiler-nix-name = "ghc8107"; 
           project.extraHackage = [
+            "${inputs.cardano-node}/cardano-api"
           #  "${inputs.plutus}/plutus-ledger-api"
           #  "${inputs.plutus-apps}/plutus-ledger" 
           #  "${inputs.plutus-apps}/plutus-script-utils" 
           #  "${inputs.plutus-apps}/freer-extras"
-           "${inputs.plutarch}"
+          #  "${inputs.plutarch}"
           #  "${inputs.quickcheck-contractmodel}/contractmodel"
           #  "${inputs.iohk-monitoring}/iohk-monitoring"
           #  "${inputs.cardano-node}/cardano-api"
