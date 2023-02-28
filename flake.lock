@@ -9840,6 +9840,23 @@
         "type": "github"
       }
     },
+    "plutus-apps_5": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677591467,
+        "narHash": "sha256-W/1Tp1KeIVFFcXt+MsbNPplA9bQYoxvHq6scJVFk/2g=",
+        "owner": "input-output-hk",
+        "repo": "plutus-apps",
+        "rev": "671fb02a872b1060fee67f3070ad6ab893a6122e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "input-output-hk",
+        "repo": "plutus-apps",
+        "rev": "671fb02a872b1060fee67f3070ad6ab893a6122e",
+        "type": "github"
+      }
+    },
     "plutus-example": {
       "inputs": {
         "customConfig": "customConfig_8",
@@ -10020,9 +10037,28 @@
         "type": "github"
       }
     },
+    "quickcheck-contractmodel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676556889,
+        "narHash": "sha256-Zb6Cd23GG1STS0Eqzis+CgEcBKP54aAjFlhJYz8BRvk=",
+        "owner": "Quviq",
+        "repo": "quickcheck-contractmodel",
+        "rev": "cc43f13f98c704e0d53dbdef6a98367918f8c5c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Quviq",
+        "repo": "quickcheck-contractmodel",
+        "rev": "cc43f13f98c704e0d53dbdef6a98367918f8c5c1",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "cardano-node": "cardano-node",
+        "plutus-apps": "plutus-apps_5",
+        "quickcheck-contractmodel": "quickcheck-contractmodel",
         "tooling": "tooling"
       }
     },

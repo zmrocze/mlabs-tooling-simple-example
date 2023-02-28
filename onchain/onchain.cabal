@@ -65,6 +65,10 @@ library
 
   build-depends:
     , cardano-api == 1.35.5
+    , plutus-core                  >=1.0.0
+    , plutus-ledger-api            >=1.0.0
+    , plutus-tx                    >=1.0.0
+    -- , plutus-ledger
     -- , plutus-ledger
     -- , plutus-ledger-api  == 1.0.0.1
     -- , plutus-script-utils
