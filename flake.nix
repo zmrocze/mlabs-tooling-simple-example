@@ -44,6 +44,7 @@
       imports = [
         (tooling.lib.mkHaskellFlakeModule1 {
           project.src = ./.;
+          project.compiler-nix-name = "ghc8107"; 
           project.extraHackage = [
           #  "${inputs.plutus}/plutus-ledger-api"
           #  "${inputs.plutus-apps}/plutus-ledger" 

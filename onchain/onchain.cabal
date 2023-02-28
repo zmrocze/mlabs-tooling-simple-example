@@ -69,7 +69,7 @@ library
     -- , plutus-script-utils
     -- , plutus-tx
     -- , plutus-tx-plugin
-    , plutarch
+    -- , plutarch
 
   hs-source-dirs:  src
 
@@ -79,7 +79,7 @@ executable exporter
   build-depends:
     , base
     , bytestring
-    -- , cardano-api == 1.34.5
+    , cardano-api == 1.35.4
     , onchain
     -- , plutus-ledger
     -- , plutus-ledger-api == 1.0.0.1
