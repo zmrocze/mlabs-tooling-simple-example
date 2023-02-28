@@ -51,7 +51,13 @@
           project.compiler-nix-name = "ghc8107"; 
           project.extraHackage = [
             "${inputs.cardano-node}/cardano-api"
-          #  "${inputs.plutus}/plutus-ledger-api"
+          ];
+        })
+      ];
+    };
+}
+
+#  "${inputs.plutus}/plutus-ledger-api"
           #  "${inputs.plutus-apps}/plutus-ledger" 
           #  "${inputs.plutus-apps}/plutus-script-utils" 
           #  "${inputs.plutus-apps}/freer-extras"
@@ -59,8 +65,3 @@
           #  "${inputs.quickcheck-contractmodel}/contractmodel"
           #  "${inputs.iohk-monitoring}/iohk-monitoring"
           #  "${inputs.cardano-node}/cardano-api"
-          ];
-        })
-      ];
-    };
-}
