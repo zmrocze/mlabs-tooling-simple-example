@@ -1,7 +1,6 @@
 
-hs-source-dirs: onchain
 packages:
-  onchain
+  onchain/onchain.cabal
 tests:          false
 
 -- allow-newer:
