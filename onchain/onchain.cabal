@@ -59,18 +59,13 @@ common common
 library
   import:          common
   exposed-modules: 
-    , AlwaysSucceeds
+    , PlutusTx.AlwaysSucceeds
+    , Plutarch.AlwaysSucceeds
                  
   other-modules:
 
   build-depends:
     , cardano-api == 1.35.5
-    -- , plutus-ledger
-    -- , plutus-ledger-api  == 1.0.0.1
-    -- , plutus-script-utils
-    -- , plutus-tx
-    -- , plutus-tx-plugin
-    -- , plutarch
 
   hs-source-dirs:  src
 
@@ -82,10 +77,6 @@ executable exporter
     , bytestring
     , cardano-api == 1.35.5
     , onchain
-    -- , plutus-ledger
-    -- , plutus-ledger-api == 1.0.0.1
-    -- , plutus-tx
-    -- , plutus-tx-plugin
     , serialise
     , text
 
